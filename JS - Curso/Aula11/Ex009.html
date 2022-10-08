@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidades</title>
+</head>
+<body>
+    <h1>Identificador de Nacional ou Estrangeiro</h1>
+    Escreva a seu páis de origem: <input type="text" name="nacao" id="nacao">
+    <input type="button" value="Analisar" onclick="Nacional()">
+    <button onclick="window.location.reload()">Reiniciar</button>
+    <div id="res"></div>
+    <div id="res2"></div>
+<script>
+    function Nacional(){
+        var pais = document.getElementById('nacao');
+        var res = document.querySelector('div#res');
+        var res2 = document.querySelector('div#res2');
+        var pais2 = String(pais.value)
+        res.innerHTML = `<p>Seu país é ${pais2}</p>`
+        if(pais2 == 'Brasil'){
+            res.innerHTML += ('<p> Você é Brasileiro </p>')
+        }
+        else {
+            res2.innerHTML += ('<p> Você é Estrangeiro </p>')
+        }
+
+    }
+    
+</script>
+</body>
+</html>
